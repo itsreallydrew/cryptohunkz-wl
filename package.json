@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.27",
+    "mongoose": "^6.1.7",
+    "nodemon": "^2.0.15",
+    "provendb-sdk-node": "^0.1.0-alpha.3"
+  }
+}
