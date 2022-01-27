@@ -41,7 +41,7 @@ const sendHexProof = async (req) => {
 		console.log(proof);
 		return proof;
 	} else {
-		return 'User not on whitelist';
+		return console.log('User not on whitelist');
 	}
 };
 
