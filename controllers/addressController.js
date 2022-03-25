@@ -2,16 +2,28 @@ const express = require('express');
 const router = express.Router();
 // importing function from middleware
 const { sendHexProof } = require('../middleware/MerkleTree');
+const { sendHash } = require('../middleware/SignatureVerification');
 
 // ---------------------------
 // POST route for WL Addresses
 // ---------------------------
-router.post('/proof/', async (req, res) => {
+// router.post('/proof/', async (req, res) => {
+// 	try {
+// 		// placed all logic in middleware function sendHexProof
+// 		const merkleProof = await sendHexProof(req);
+// 		console.log(merkleProof);
+// 		res.status(200).send(merkleProof);
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// });
+
+router.post('/message/', async (req, res) => {
 	try {
-		// placed all logic in middleware function sendHexProof
-		const merkleProof = await sendHexProof(req);
-		console.log(merkleProof);
-		res.status(200).send(merkleProof);
+		// placed all logic in middleware function sendHash
+		const hashedMessage = await sendHash(req);
+		console.log(hashedMessage);
+		res.status(200).send(hashedMessage);
 	} catch (error) {
 		console.log(error);
 	}
